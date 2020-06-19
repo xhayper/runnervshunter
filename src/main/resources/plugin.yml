@@ -30,9 +30,7 @@ permissions:
     description: Gives Access To All Commands
     children:
       svsh.hunter.set: true
-      svsh.hunter.set.other: true
       svsh.runner.set: true
-      svsh.runner.set.other: true
       svsh.start: true
       svsh.stop: true
   svsh.hunter.set:
