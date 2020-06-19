@@ -1,0 +1,51 @@
+name: SpeedrunnerVSHunter
+version: 1.0.0
+description: Inspried by Dream
+api-version: 1.15
+author: hayper
+main: com.hayper.speedrunnervshunter.Main
+commands:
+  sethunter:
+    description: Set yourself as hunter or set others as hunter
+    permission: svsh.hunter.set
+    usage: "Usage: /<command> [player]"
+  setrunner:
+    description: Set yourself as runner or set others as runner
+    permission: svsh.runner.set
+    usage: "Usage: /<command> [player]"
+  setpreparetime:
+    description: Set the time for runner to prepare
+    permission: svsh.runner.preparetime.set
+    usage: "Usage: /<command> [time in seconds]"
+  startgame:
+    description: Start the game!
+    permission: svsh.start
+    usage: "Usage: /<command>"
+  stopgame:
+    description: Stop the game!
+    permission: svsh.stop
+    usage: "Usage: /<command>"
+permissions:
+  svsh.*:
+    description: Gives Access To All Commands
+    children:
+      svsh.hunter.set: true
+      svsh.hunter.set.other: true
+      svsh.runner.set: true
+      svsh.runner.set.other: true
+      svsh.start: true
+      svsh.stop: true
+  svsh.hunter.set:
+    default: op
+  svsh.hunter.set.other:
+    default: op
+  svsh.runner.set:
+    default: op
+  svsh.runner.set.other:
+    default: op
+  svsh.runner.preparetime.set:
+    default: op
+  svsh.start:
+    default: op
+  svsh.stop:
+    default: op
