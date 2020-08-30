@@ -1,7 +1,7 @@
 # RunnerVSHunter
 
 Inspired by Dream's SpeedRunner VS Hunter series.<br>
-Note : This was made in Java 14
+Note : This was made in Java 14 and in Paper
 
 ## Commands
 ```yaml
