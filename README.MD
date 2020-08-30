@@ -1,6 +1,6 @@
 # RunnerVSHunter
 
-Inspired by Dream's SpeedRunner VS Hunter series.
+Inspired by Dream's SpeedRunner VS Hunter series.<br>
 Note : This was made in Java 14
 
 ## Commands
