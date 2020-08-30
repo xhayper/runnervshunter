@@ -1,0 +1,97 @@
+name: RunnerVSHunter
+version: ${project.version}
+main: io.github.hayper.rvsh.Main
+api-version: 1.16
+authors: [ hayper ]
+description: A plugin inspired by Dream's SpeedRunner VS Hunter series
+
+commands:
+  setPrepareTime:
+    description: Set the prepare time for the runner
+    aliases: [ preparetime ]
+    permission: rvsh.setPrepareTime
+    usage: |
+      /removerunner [Time In Second]
+      /preparetime [Time In Second]
+  setDeathMode:
+    description: Set the death mode for the runner
+    aliases: [ deathmode ]
+    permission: rvsh.setPrepareTime
+    usage: |
+      /setdeathmode [Death Mode]
+      /deathmode [Death Mode]
+      Death Mode List :
+      END_GAME - If one runner died, the game end
+      SPECTATOR - The runner that died, goes into spectator
+      SWITCH_TO_HUNTER - The runner that died, switch to hunter team
+  removeHunter:
+    description: Remove someone from hunter team
+    permission: rvsh.removeHunter
+    usage: |
+      /removehunter [List] [Of] [Player]
+  removeRunner:
+    description: Remove someone from runner team
+    permission: rvsh.removeRunner
+    usage: |
+      /removerunner [List] [Of] [Player]
+  addHunter:
+    description: Add someone to the hunter team
+    aliases: [ sethunter ]
+    permission: rvsh.addHunter
+    usage: |
+      /addhunter [List] [Of] [Player]
+      /sethunter [List] [Of] [Player]
+  addRunner:
+    description: Remove someone from runner team
+    permission: rvsh.addRunner
+    aliases: [ setrunner ]
+    usage: |
+      /addrunner [List] [Of] [Player]
+      /setrunner [List] [Of] [Player]
+  startGame:
+    description: Start the Runner VS Hunter game
+    permission: rvsh.startGame
+    usage: |
+      /startgame
+  stopGame:
+    description: Stop the Runner VS Hunter Game
+    permission: rvsh.stopGame
+    usage: |
+      /stopgame
+
+permissions:
+  rvsh.*:
+    description: Gives access to all RunnerVSHunter commands
+    children:
+      rvsh.setPrepareTime: true
+      rvsh.setDeathMode: true
+      rvsh.removeHunter: true
+      rvsh.removeRunner: true
+      rvsh.addHunter: true
+      rvsh.addRunner: true
+      rvsh.startGame: true
+      rvsh.stopGame: true
+  rvsh.setPrepareTime:
+    description: Allow you to set the prepare time for the runner
+    default: op
+  rvsh.setDeathMode:
+    description: Allow you to set the deathmode for the runner
+    default: op
+  rvsh.removeHunter:
+    description: Allow you to remove someone from hunter team
+    default: op
+  rvsh.removeRunner:
+    description: Allow you to remove someone from runner team
+    default: op
+  rvsh.addHunter:
+    description: Allow you to add someone to hunter team
+    default: op
+  rvsh.addRunner:
+    description: Allow you to add someone to runner team
+    default: op
+  rvsh.startGame:
+    description: Allow you to start the game
+    default: op
+  rvsh.stopGame:
+    description: Allow you to stop the current game
+    default: op
