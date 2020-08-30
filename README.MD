@@ -1,9 +1,9 @@
-#RunnerVSHunter
+# RunnerVSHunter
 
 Inspired by Dream's SpeedRunner VS Hunter series.
 Note : This was made in Java 14
 
-##Commands
+## Commands
 ```yaml
 commands:
   setPrepareTime:
