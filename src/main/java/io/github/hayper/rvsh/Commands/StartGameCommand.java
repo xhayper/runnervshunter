@@ -30,7 +30,9 @@ public class StartGameCommand implements CommandExecutor {
                 hunter.getInventory().clear();
                 hunter.getInventory().addItem(new ItemStack(Material.COMPASS));
                 hunter.sendMessage("The game has started!");
-                hunter.addPotionEffects(getHunterEffects());
+                if (GameManager.prepareTime != 0) {
+                    hunter.addPotionEffects(getHunterEffects());
+                }
             });
         } else {
             sender.sendMessage("Need at least 1 hunter and 1 runner!");
